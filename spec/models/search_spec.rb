@@ -5,12 +5,10 @@ describe Search do
  	let (:search) {Search.new}
 
  	before do 
-
  		@response = search.contactGit('tobyret')
-
  	end
 
- 	context '#new' do
+ 	context 'contacting Github Api' do
 
  		it 'gets successful response from Github API' do
  			expect(@response).to be_an_instance_of(Array)
