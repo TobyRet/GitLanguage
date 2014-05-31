@@ -8,4 +8,8 @@ class LanguageCalculator
 		@results.map { |repo| repo['language'] }
 	end
 
+	def most_common
+		self.find_languages.group_by { |language| language }.values.max_by(&:size).first
+	end
+
 end

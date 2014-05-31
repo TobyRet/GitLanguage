@@ -13,9 +13,9 @@ describe 'Language Calulator' do
 
 	end
 
-	it "counts the number of languages" do
+	it "returns the most popular language" do
 
-
+		expect(calculation.most_common).to eq('Ruby')
 
 	end
 
