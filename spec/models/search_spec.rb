@@ -2,10 +2,10 @@ require 'spec_helper'
 
 describe Search do
  
- 	let (:search) {Search.new}
+ 	let (:contact) {GithubApi.new('tobyret')}
 
  	before do 
- 		@response = search.contactGit('tobyret')
+ 		@response = contact.contactGit
  	end
 
  	context 'contacting Github Api' do

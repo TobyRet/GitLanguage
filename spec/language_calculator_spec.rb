@@ -1,10 +1,11 @@
 require 'spec_helper'
 require './lib/language_calculator'
+require './lib/github_api.rb'
 
-describe 'Language Calulator' do 
+describe 'Language Calculator' do 
 
-	let(:search) { Search.new }
-	let(:results) { search.contactGit('tobyret') }
+	let(:contact) { GithubApi.new('tobyret') }
+	let(:results) { contact.contactGit }
 	let(:calculation) { LanguageCalculator.new(results) }
 
 	it "returns an array of languages used from the API" do
