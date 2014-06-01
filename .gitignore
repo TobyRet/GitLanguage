@@ -19,5 +19,4 @@ doc/
 .swp
 .DS_Store
 .rspec
-/config/secrets.yml
 /public/system
