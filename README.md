@@ -16,4 +16,4 @@ These are some further improvements that need to be made:
 
 ### Screengrab
 
-![](app/assetsimages/screengrab.png)
+![](app/assets/images/screengrab.png)
