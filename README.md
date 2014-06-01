@@ -5,7 +5,7 @@ This app uses the Github API to determine the likely 'favourite' programming lan
 
 The app works by fetching information about a user's repositories and measuring the frequency of each programming language used, returning the one with the highest frequency.
 
-Test driven development (Rspec and Cabyrbara gems) were used throughout the process.
+Test driven development (Rspec and Cabyrbara gems) was used throughout the process.
 
 ### Access the app
 This app is live on Heroku - http://shielded-atoll-7695.herokuapp.com/
