@@ -20,4 +20,15 @@ feature 'user language' do
 
 	end
 
+	scenario 'starting a new search' do
+
+		visit '/'
+		fill_in 'Username', with: 'tobyret'
+		click_button 'submit'
+		click_link 'new search'
+
+		expect(current_path).to eq('/')
+
+	end
+
 end
