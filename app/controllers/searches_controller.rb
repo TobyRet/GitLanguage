@@ -9,18 +9,15 @@ class SearchesController < ApplicationController
 
 	def create
 		@search = Search.new params[:search].permit(:username)
-		@contact = GithubApi.new(username)
+		@contact = GithubApi.new(@search[:username])
 		@calculation = LanguageCalculator.new(@contact.contactGit)	
 		
 		if @search.save
 			render 'show'
 		else
+			flash[:notice] = "Sorry, something went wrong. Please try again."
 			render 'new'
 		end
 	end
-
-	def username
-		@search[:username]
-	end
-
+	
 end

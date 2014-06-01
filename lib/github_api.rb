@@ -12,7 +12,10 @@ class GithubApi
 	end
 
 	def contactGit
-		response = HTTParty.get("https://api.github.com/users/#{@username}/repos", headers: { "User-Agent" => 'GitLanguage'} )
+
+		response = HTTParty.get("https://api.github.com/users/#{@username}/repos", 
+			headers: { "User-Agent" => 'GitLanguage' } )
+
 		JSON.parse(response.body)
 	end
 
