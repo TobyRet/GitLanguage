@@ -26,22 +26,14 @@ feature 'user language' do
 
 	end
 
-	context 'Validations' do 
+	context 'Username validation' do 
 
-		it 'user has to provide and existing Github username' do
+		it 'returns an error message for incorrect git username' do
 			
 			sign_in_fakeuser
 
 			expect(page).to have_content('Sorry, user not found')
 
-		end
-
-		it 'provides a notification if there is no favourite language' do
-
-
-		end
-
-		it 'can determine if there is more than one favourite language' do
 		end
 
 	end
