@@ -30,11 +30,7 @@ feature 'user language' do
 
 		it 'user has to provide and existing Github username' do
 			
-			# sign_in_fakeuser
-
-			visit '/'
-			fill_in 'Username', with: 'Xcncjffo'
-			click_button 'submit'
+			sign_in_fakeuser
 
 			expect(page).to have_content('Sorry, user not found')
 

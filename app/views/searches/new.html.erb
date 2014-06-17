@@ -2,18 +2,22 @@
 	<h1>Favourite Programming Language</h1>
 </div>
 
-<p>Enter the name of a Github member to find out what their favourite programming language is.</p>
-<br />
-	<div class="row">
-		<div class= "col-md-4">
-			<%= form_for @search do |f| %>
-				<div class="form-group">
-					<%= f.label :username, class: "form-label"  %>
-					<%= f.text_field :username, class: "form-control" %><br/>
-					<%= f.button :submit, class: "btn btn-primary" %>
-				</div>
-			<% end %>
-		</div>
+<p>Enter the name of a Github member to find out what their favourite programming language is.</p><br />
+
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<div class="row">
+	<div class= "col-md-4">
+		<%= form_for @search do |f| %>
+			<div class="form-group">
+				<%= f.label :username, class: "form-label"  %>
+				<%= f.text_field :username, class: "form-control" %><br/>
+				<%= f.button :submit, class: "btn btn-primary" %>
+			</div>
+		<% end %>
 	</div>
+</div>
 
 
