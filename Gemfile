@@ -6,6 +6,7 @@ gem 'rails'
 gem 'pg'
 gem 'bootstrap-sass'
 gem 'httparty'
+gem 'figaro'
 
 
 

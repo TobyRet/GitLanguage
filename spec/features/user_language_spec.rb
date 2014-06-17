@@ -26,4 +26,28 @@ feature 'user language' do
 
 	end
 
+	context 'Validations' do 
+
+		it 'user has to provide and existing Github username' do
+			
+			# sign_in_fakeuser
+
+			visit '/'
+			fill_in 'Username', with: 'Xcncjffo'
+			click_button 'submit'
+
+			expect(page).to have_content('Sorry, user not found')
+
+		end
+
+		it 'provides a notification if there is no favourite language' do
+
+
+		end
+
+		it 'can determine if there is more than one favourite language' do
+		end
+
+	end
+
 end
