@@ -11,10 +11,15 @@ class SearchesController < ApplicationController
 		@search = Search.new params[:search].permit(:username)
 		@contact = GithubApi.new(@search[:username])
 
-		puts @contact.contactGit['message']
-
-		@calculation = LanguageCalculator.new(@contact.contactGit)
-		render 'show'
+		if @contact.contactGit.instance_of?(Array)
+			@calculation = LanguageCalculator.new(@contact.contactGit)
+			render 'show'
+		else
+			flash[:notice] = 'Sorry, user not found'
+			render 'new'
+		end
+		
 	end
 	
 end
+
